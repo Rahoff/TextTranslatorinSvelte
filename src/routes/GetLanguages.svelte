@@ -1,0 +1,32 @@
+<script>
+    import { storeLanguage } from './stores';
+    export let langChoice;
+    
+
+
+    function LanguageSelection(){
+        langChoice = document.getElementById('languageSelect').value;
+        storeLanguage.set(langChoice);
+    }
+
+</script>
+
+<select name = "language" id="languageSelect" on:change= { LanguageSelection }>
+    <option selected disabled>Choose a language</option>
+    <option value="en">English</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+    <option value="zh">Chinese</option>
+    <option value="de">German</option>
+    <option value="hi">Hindi</option>
+    <option value="id">Indonesian</option>
+    <option value="ga">Irish</option>
+    <option value="it">Italian</option>
+    <option value="ja">Japanese</option>
+    <option value="ko">Korean</option>
+    <option value="pl">Polish</option>
+    <option value="pt">Portuguese</option>
+    <option value="ru">Russian</option>
+    <option value="tr">Turkish</option>
+    <option value="vi">Vietnamese</option>
+</select>
