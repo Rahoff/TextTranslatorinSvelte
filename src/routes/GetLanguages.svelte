@@ -1,16 +1,14 @@
 <script>
     import { storeLanguage } from './stores';
-    export let langChoice;
-    
-
-
+    let langChoice;
+    // This just sets the language in the svelte store 
     function LanguageSelection(){
         langChoice = document.getElementById('languageSelect').value;
         storeLanguage.set(langChoice);
     }
-
 </script>
 
+<!--Below is the list of languages available through the free api at LibreTranslate-->
 <select name = "language" id="languageSelect" on:change= { LanguageSelection }>
     <option selected disabled>Choose a language</option>
     <option value="en">English</option>
