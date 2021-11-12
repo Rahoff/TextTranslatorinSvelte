@@ -28,3 +28,9 @@
     <option value="tr">Turkish</option>
     <option value="vi">Vietnamese</option>
 </select>
+
+<style>
+    select{
+        background-color: rgb(211, 138, 112);
+    }
+</style>
