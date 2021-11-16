@@ -1,5 +1,6 @@
 <script>
     import { storeLanguage } from './stores';
+
     let userText;
     let englishText;
     var speech;
@@ -31,9 +32,9 @@
     }
 
     function ClearBoxes(){
-        document.getElementById('inputs1').value = '';
-        document.getElementById('inputs').value = '';
         speech, userText = "";
+        englishText = "";
+        language.set("");
     }
 </script>
 
