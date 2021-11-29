@@ -33,6 +33,7 @@
 
 <style>
     select{
-        background-color: rgb(211, 138, 112);
+        background-color:coral;
+        border-radius: 25px;
     }
 </style>

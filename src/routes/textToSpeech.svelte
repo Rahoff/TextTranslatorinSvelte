@@ -34,11 +34,10 @@
     function ClearBoxes(){
         speech, userText = "";
         englishText = "";
-        language.set("");
     }
 </script>
 
-<label for="inputs">Enter text below</label>
+<label for="inputs">Enter your text below.</label>
 <button on:click={translateText}>Click to translate</button>
 
 <br>
@@ -56,15 +55,23 @@
     label{
         font-size:30px;
         font-weight: bold;
+        color: darkred;
+        padding-bottom: 100px;
     }
     textarea{
-        background-color: rgb(221, 195, 162);
+        background-color:orangered;
+        color: black;
         font-size: large;
         font-weight: bolder;
         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding-top: 41px;
+        border-radius: 25px;
     }
     button{
-        background-color: rgb(211, 138, 112);
+        background-color: coral;
+        border-radius: 25px;
+        margin: 15px;
     }
 </style>
 
