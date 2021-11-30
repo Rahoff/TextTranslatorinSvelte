@@ -5,16 +5,15 @@
 </script>
 
 <div id="nav">
-    <Navbar/>
+    <Navbar/> 
+    <GetLanguages/>
     <br>
     <br>
     <br>
     <br>
 </div>
 
-
 <div id="main">
-    <GetLanguages/>
     <TextToSpeech/>
 </div>
 
@@ -25,15 +24,17 @@
         left: 50%;
         top: 10%;
         transform: translate(-50%, -50%);
-        width: max-content;
+        width: 100%;
     }
     #main{
         text-align: center;
         position: absolute;
         left: 50%;
         top: 55%;
+        margin-top: 100px;
         transform: translate(-50%, -50%);
         background-color: white;
-        
+        width: 40%;
+        height: 100vh;
     }
 </style>

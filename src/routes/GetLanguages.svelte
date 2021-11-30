@@ -33,7 +33,12 @@
 
 <style>
     select{
-        background-color:coral;
+        background-color:silver;
         border-radius: 25px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 15%;
+        height: 10%;
     }
 </style>

@@ -38,18 +38,19 @@
 </script>
 
 <label for="inputs">Enter your text below.</label>
-<button on:click={translateText}>Click to translate</button>
 
 <br>
 <!-- svelte-ignore a11y-autofocus -->
-<textarea bind:value= { englishText } id='inputs' rows="10" cols ="65" placeholder="Enter your text" autofocus=true></textarea><br>
-<button on:click= { ClearBoxes }>Clear the text boxes</button><br>
+<textarea bind:value= { englishText } id='inputs' rows="5" cols ="50" placeholder="Enter your text" autofocus=true></textarea><br>
+<button on:click={ translateText }>Translate</button><br>
+<button on:click={ textToSpeech }>Play</button>
+<button on:click= { ClearBoxes }>Clear</button><br>
 
 <label for="inputs1">Translated text</label>
 <br>
-<textarea bind:value={ userText } id='inputs1' rows="10" cols="65" disabled placeholder="Translation will be here."></textarea>
+<textarea bind:value={ userText } id='inputs1' rows="5" cols="50" disabled placeholder="Translation will be here."></textarea>
 <br>
-<button on:click={textToSpeech}>Click to hear</button>
+
 
 <style>
     label{
@@ -59,7 +60,7 @@
         padding-bottom: 100px;
     }
     textarea{
-        background-color:orangered;
+        background-color:rgb(207, 147, 124);
         color: black;
         font-size: large;
         font-weight: bolder;
@@ -67,11 +68,16 @@
         text-align: center;
         padding-top: 41px;
         border-radius: 25px;
+        width: 75%;
+        height: auto;
+        
     }
     button{
-        background-color: coral;
-        border-radius: 25px;
+        background-color: silver;
+        border-radius: 10%;
         margin: 15px;
+        width: 60%;
+        height: 30px;
     }
 </style>
 
