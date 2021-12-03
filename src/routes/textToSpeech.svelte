@@ -11,6 +11,7 @@
         speech.lang = $storeLanguage;
         window.speechSynthesis.speak(speech);
     }
+    //This connects to the free translator api.
     async function translateText(){
         if( $storeLanguage != ""){
             const res = await fetch("https://translate.argosopentech.com/translate", {
@@ -21,12 +22,14 @@
                             target: $storeLanguage,
                         }),
                         headers: { "Content-Type": "application/json" }
+                    }).catch(() => {
+                        alert("There is a problem, please check your internet connection and try again.");
                     });
             var translation = await res.json(); 
             userText = translation.translatedText;
         }
         else{
-           window.alert("Please Choose a Language")
+           alert("Please Choose a Language")
         }
 
     }
@@ -41,7 +44,7 @@
 
 <br>
 <!-- svelte-ignore a11y-autofocus -->
-<textarea bind:value= { englishText } id='inputs' rows="5" cols ="50" placeholder="Enter your text" autofocus=true></textarea><br>
+<textarea bind:value= { englishText } id='inputs' rows="5" cols ="50" placeholder="Enter your text here." autofocus=true></textarea><br>
 <button on:click={ translateText }>Translate</button><br>
 <button on:click={ textToSpeech }>Play</button>
 <button on:click= { ClearBoxes }>Clear</button><br>
@@ -73,8 +76,8 @@
         
     }
     button{
-        background-color: silver;
-        border-radius: 10%;
+        background-color:burlywood;
+        border-radius: 25px;
         margin: 15px;
         width: 60%;
         height: 30px;
