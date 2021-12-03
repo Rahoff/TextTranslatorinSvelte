@@ -33,7 +33,7 @@
 
 <style>
     select{
-        background-color:silver;
+        background-color:burlywood;
         border-radius: 25px;
         position: absolute;
         left: 50%;
